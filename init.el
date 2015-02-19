@@ -15,6 +15,7 @@
 
 ;; Editing
 (setq standard-indent 2)
+(setq-default indent-tabs-mode nil)
 
 
 ;; Backups
