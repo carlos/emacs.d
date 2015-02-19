@@ -7,10 +7,12 @@
 ;; General Configuration
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(setq inhibit-startup-message t)
 (fset 'yes-or-no-p 'y-or-n-p)
-(setq visible-bell t)
 (line-number-mode 1)
+(setq-default
+  inhibit-startup-screen t
+  visible-bell t
+  ring-bell-function (lambda () (message "*beep*")))
 (column-number-mode 1)
 
 ;; Editing
