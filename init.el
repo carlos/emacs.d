@@ -4,7 +4,6 @@
              '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 (package-initialize)
 
-
 ;; General Configuration
 (tool-bar-mode -1)
 (setq inhibit-startup-message t)
@@ -17,7 +16,6 @@
 (setq standard-indent 2)
 (setq-default indent-tabs-mode nil)
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
-
 
 ;; Backups
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
