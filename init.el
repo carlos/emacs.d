@@ -13,6 +13,9 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
+;; Editing
+(setq standard-indent 2)
+
 
 ;; Backups
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
