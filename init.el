@@ -10,3 +10,5 @@
 (setq inhibit-startup-message t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq visible-bell t)
+(line-number-mode 1)
+(column-number-mode 1)
