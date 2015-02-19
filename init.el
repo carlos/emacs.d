@@ -8,7 +8,6 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
-(line-number-mode 1)
 (setq-default
   inhibit-startup-screen t
   visible-bell t
