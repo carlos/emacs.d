@@ -16,6 +16,7 @@
 ;; Editing
 (setq standard-indent 2)
 (setq-default indent-tabs-mode nil)
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
 
 
 ;; Backups
