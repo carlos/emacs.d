@@ -19,3 +19,6 @@
 
 ;; Backups
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
+
+;; Themes
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
