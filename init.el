@@ -12,3 +12,7 @@
 (setq visible-bell t)
 (line-number-mode 1)
 (column-number-mode 1)
+
+
+;; Backups
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
