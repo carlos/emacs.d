@@ -1,7 +1,8 @@
 ;; Package management
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+             '("melpa" . "https://melpa.org/packages/")
+             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
 (package-initialize)
 
 ;; General Configuration
