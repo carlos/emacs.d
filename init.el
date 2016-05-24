@@ -20,6 +20,24 @@
 (setq-default indent-tabs-mode nil)
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
 
+(defun comment-line-toggle ()
+ (interactive)
+ (let ((start (line-beginning-position))
+       (end (line-end-position)))
+   (when (or (not transient-mark-mode) (region-active-p))
+     (setq start (save-excursion
+                   (goto-char (region-beginning))
+                   (beginning-of-line)
+                   (point))
+           end (save-excursion
+                 (goto-char (region-end))
+                 (end-of-line)
+                 (point))))
+   (comment-or-uncomment-region start end)))
+(global-set-key (kbd "C-M-;") 'comment-line-toggle)
+(global-set-key (kbd "s-/") 'comment-line-toggle) ; mac shortcut
+(global-set-key (kbd "C-x C-;") 'comment-region) ; this one let's YOU decide whether to (un)comment
+
 ;; Backups
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
 
