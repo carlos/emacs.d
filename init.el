@@ -15,6 +15,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Editing
+(delete-selection-mode 1)
 (setq standard-indent 2)
 (setq-default indent-tabs-mode nil)
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
