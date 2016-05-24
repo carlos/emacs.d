@@ -52,10 +52,21 @@
                  nil
                  t)
 
+;; OS X customizations
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; Javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(exec-path
+   (quote
+    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/Cellar/emacs/24.5/libexec/emacs/24.5/x86_64-apple-darwin14.3.0")))
  '(js2-basic-offset 2))
