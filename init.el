@@ -61,6 +61,18 @@
 (setq helm-autoresize-mode t)
 (setq helm-split-window-in-side-p t)
 
+;; Projectile
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+
+;; (setq helm-projectile-fuzzy-match nil)
+(require 'helm-projectile)
+(helm-projectile-on)
+
+;; control helm "popup" buffers
+(setq shackle-rules '(("\\`\\*helm.*?\\*\\'" :regexp t :align t :size 0.3)))
+(shackle-mode)
+
 ;; Javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
