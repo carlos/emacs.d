@@ -56,6 +56,11 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+;; Helm
+(require 'helm-config)
+(setq helm-autoresize-mode t)
+(setq helm-split-window-in-side-p t)
+
 ;; Javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
