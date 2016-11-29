@@ -1,8 +1,13 @@
 ;; Package management
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/")
-             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+
+(when (boundp 'package-pinned-packages)
+ (setq package-pinned-packages
+       '((cider . "melpa-stable")
+         )))
+
 (package-initialize)
 
 ;; General Configuration
