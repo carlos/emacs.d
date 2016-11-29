@@ -60,6 +60,11 @@
 ;; OS X customizations
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+(setq mouse-wheel-scroll-amount '(2 ((shift) . 1) ((control) . nil)))
+(setq mouse-wheel-progressive-speed nil)
+
+;; Buffer Selection
+(global-set-key (kbd "C-x C-b") 'bs-show)
 
 ;; Helm
 (require 'helm-config)
