@@ -20,7 +20,7 @@
 (setq standard-indent 2)
 (setq-default indent-tabs-mode nil)
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
-
+(show-paren-mode t)
 (defun comment-line-toggle ()
  (interactive)
  (let ((start (line-beginning-position))
