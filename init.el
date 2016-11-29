@@ -49,9 +49,9 @@
 
 ;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'base16-eighties t)
-(set-frame-font (font-spec :family "Roboto Mono"
-                           :size 14
+(load-theme 'base16-ocean t)
+(set-frame-font (font-spec :family "Menlo"
+                           :size 15
                            :antialias t
                            :weight 'light)
                  nil
