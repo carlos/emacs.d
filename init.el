@@ -75,7 +75,7 @@
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 
-;; (setq helm-projectile-fuzzy-match nil)
+;; Projectile + HELM
 (require 'helm-projectile)
 (helm-projectile-on)
 
@@ -88,6 +88,15 @@
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
+;; Clojure
+(setq nrepl-log-messages nil)
+(setq cider-repl-use-pretty-printing t)
+
+;; (add-to-list 'load-path "~/.emacs.d/parinfer-mode/")
+;; (require 'parinfer-mode)
+;; (add-hook 'clojure-mode-hook 'parinfer-mode)
+
+;; Custom configuration
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -95,5 +104,15 @@
  ;; If there is more than one, they won't work right.
  '(exec-path
    (quote
-    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/Cellar/emacs/24.5/libexec/emacs/24.5/x86_64-apple-darwin14.3.0")))
- '(js2-basic-offset 2))
+    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/Cellar/emacs/25.1/libexec/emacs/25.1/x86_64-apple-darwin16.0.0")))
+ '(js-indent-level 2)
+ '(js2-basic-offset 2)
+ '(package-selected-packages
+   (quote
+    (less-css-mode editorconfig base16-theme shader-mode shackle paredit js2-mode helm-projectile helm-ag flx-ido exec-path-from-shell clojure-mode-extra-font-locking ag ac-cider))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
