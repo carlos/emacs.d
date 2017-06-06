@@ -10,6 +10,36 @@
 
 (package-initialize)
 
+(defvar my-packages '(better-defaults
+                      editorconfig
+                      ;; less-css-mode
+                      shackle
+                      base16-theme
+                      js2-mode
+                      projectile
+                      helm-projectile
+                      helm-ag
+                      flx-ido
+                      ;; exec-path-from-shell
+                      ;; clojure-mode-extra-font-locking
+                      ag
+                      ac-cider
+                      ;; paredit
+                      ;; idle-highlight-mode
+                      ;; ido-ubiquitous
+                      ;; find-file-in-project
+                      ;; magit
+                      ;; smex
+                      ;; scpaste
+                      ))
+
+(package-initialize)
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
+
+
 ;; General Configuration
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -87,6 +117,9 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+ ;; '(js-indent-level 2)
+ ;; '(js2-basic-offset 2)
+
 
 ;; Clojure
 (setq nrepl-log-messages nil)
@@ -104,15 +137,4 @@
  ;; If there is more than one, they won't work right.
  '(exec-path
    (quote
-    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/Cellar/emacs/25.1/libexec/emacs/25.1/x86_64-apple-darwin16.0.0")))
- '(js-indent-level 2)
- '(js2-basic-offset 2)
- '(package-selected-packages
-   (quote
-    (less-css-mode editorconfig base16-theme shader-mode shackle paredit js2-mode helm-projectile helm-ag flx-ido exec-path-from-shell clojure-mode-extra-font-locking ag ac-cider))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/Cellar/emacs/25.1/libexec/emacs/25.1/x86_64-apple-darwin16.0.0"))))
